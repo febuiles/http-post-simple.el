@@ -1,6 +1,7 @@
 ;;; http-post-simple.el --- HTTP POST requests using the url library
 
 ;; Author: Tom Schutzer-Weissmann
+;; Version: 1.0
 ;; Keywords: comm, data, processes, hypermedia
 
 ;; This program is free software; you can redistribute it and/or
@@ -49,6 +50,7 @@
 (require 'url-http)
 (require 'cl)
 
+;;;###autoload
 (defun http-post-simple (url fields &optional charset)
   "Send FIELDS to URL as an HTTP POST request, returning the response
 and response headers.
@@ -66,6 +68,7 @@ which defaults to 'utf-8"
         charset)))))
 
 
+;;;###autoload
 (defun http-post-simple-multipart (url fields files &optional charset)
   "Send FIELDS and FILES to URL as a multipart HTTP POST, returning the
 response and response headers.
